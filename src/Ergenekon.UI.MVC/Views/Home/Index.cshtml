@@ -1,0 +1,160 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p> ...</p>
+    <h1 class="text-xl  ">
+        Hello world!
+    </h1>
+    <div v-scope="{ count: 8 }" class="bookshelf">
+        {{ count }}
+        <button @@click="count++" class="btn btn-sm btn-primary">
+            Button
+        </button>
+    </div>
+    <!-- Middle Start -->
+
+    <button type="button" class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="middle-start-modal" data-overlay="#middle-start-modal">Middle start</button>
+
+    <div id="middle-start-modal" class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 modal-middle-start hidden" role="dialog" tabindex="-1">
+        <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Dialog Title</h3>
+                    <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" aria-label="Close" data-overlay="#middle-start-modal">
+                        <span class="icon-[tabler--x] size-4"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    This is some placeholder content to show the scrolling behavior for modals. Instead of repeating the text in the
+                    modal, we use an inline style to set a minimum height, thereby extending the length of the overall modal and
+                    demonstrating the overflow scrolling. When content becomes longer than the height of the viewport, scrolling
+                    will move the modal as needed.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-soft btn-secondary" data-overlay="#middle-start-modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Middle Center -->
+
+    <button type="button" class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="middle-center-modal" data-overlay="#middle-center-modal">Middle center</button>
+
+    <div id="middle-center-modal" class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 modal-middle hidden" role="dialog" tabindex="-1">
+        <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Dialog Title</h3>
+                    <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" aria-label="Close" data-overlay="#middle-center-modal">
+                        <span class="icon-[tabler--x] size-4"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    This is some placeholder content to show the scrolling behavior for modals. Instead of repeating the text in the
+                    modal, we use an inline style to set a minimum height, thereby extending the length of the overall modal and
+                    demonstrating the overflow scrolling. When content becomes longer than the height of the viewport, scrolling
+                    will move the modal as needed.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-soft btn-secondary" data-overlay="#middle-center-modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Middle End -->
+
+    <button type="button" class="btn btn-primary" aria-haspopup="dialog" aria-expanded="false" aria-controls="middle-end-modal" data-overlay="#middle-end-modal">Middle end</button>
+
+    <div id="middle-end-modal" class="overlay modal overlay-open:opacity-100 overlay-open:duration-300 modal-middle-end hidden" role="dialog" tabindex="-1">
+        <div class="modal-dialog overlay-open:opacity-100 overlay-open:duration-300">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title">Dialog Title</h3>
+                    <button type="button" class="btn btn-text btn-circle btn-sm absolute end-3 top-3" aria-label="Close" data-overlay="#middle-end-modal">
+                        <span class="icon-[tabler--x] size-4"></span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    This is some placeholder content to show the scrolling behavior for modals. Instead of repeating the text in the
+                    modal, we use an inline style to set a minimum height, thereby extending the length of the overall modal and
+                    demonstrating the overflow scrolling. When content becomes longer than the height of the viewport, scrolling
+                    will move the modal as needed.
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-soft btn-secondary" data-overlay="#middle-end-modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div><span class="icon-[tabler--upload]"></span>
+<div class="flyon-accordion" id="my-accordion">
+    <div class="flyon-accordion-item">
+        <h2 class="flyon-accordion-header" id="heading-1">
+            <button class="flyon-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse-1" aria-expanded="true" aria-controls="collapse-1">
+                Accordion Item #1
+            </button>
+        </h2>
+        <div id="collapse-1" class="flyon-accordion-collapse collapse show" aria-labelledby="heading-1" data-bs-parent="#my-accordion">
+            <div class="flyon-accordion-body">
+                Accordion content goes here...
+            </div>
+        </div>
+    </div>
+</div>
+<div class="accordion divide-neutral/20 divide-y">
+    <div class="accordion-item active" id="payment-basic">
+        <button class="accordion-toggle inline-flex items-center gap-x-4 text-start" aria-controls="payment-basic-collapse" aria-expanded="true">
+            <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
+            <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
+            When is payment taken for my order?
+        </button>
+        <div id="payment-basic-collapse" class="accordion-content w-full overflow-hidden transition-[height] duration-300" aria-labelledby="payment-basic" role="region">
+            <div class="px-5 pb-4">
+                <p class="text-base-content/80 font-normal">
+                    Payment is taken during the checkout process when you pay for your order. The order number that appears on the
+                    confirmation screen indicates payment has been successfully processed.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item" id="delivery-basic">
+        <button class="accordion-toggle inline-flex items-center gap-x-4 text-start" aria-controls="delivery-basic-collapse" aria-expanded="false">
+            <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
+            <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
+            How would you ship my order?
+        </button>
+        <div id="delivery-basic-collapse" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="delivery-basic" role="region">
+            <div class="px-5 pb-4">
+                <p class="text-base-content/80 font-normal">
+                    For large products, we deliver your product via a third party logistics company offering you the “room of
+                    choice” scheduled delivery service. For small products, we offer free parcel delivery.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="accordion-item" id="cancel-basic">
+        <button class="accordion-toggle inline-flex items-center gap-x-4 text-start" aria-controls="cancel-basic-collapse" aria-expanded="false">
+            <span class="icon-[tabler--plus] accordion-item-active:hidden text-base-content size-4.5 block shrink-0"></span>
+            <span class="icon-[tabler--minus] accordion-item-active:block text-base-content size-4.5 hidden shrink-0"></span>
+            Can I cancel my order?
+        </button>
+        <div id="cancel-basic-collapse" class="accordion-content hidden w-full overflow-hidden transition-[height] duration-300" aria-labelledby="cancel-basic" role="region">
+            <div class="px-5 pb-4">
+                <p class="text-base-content/80 font-normal">
+                    Scheduled delivery orders can be cancelled 72 hours prior to your selected delivery date for full refund.
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+</script>

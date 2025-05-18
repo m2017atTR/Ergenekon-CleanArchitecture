@@ -1,0 +1,13 @@
+﻿@import "tailwindcss";
+@plugin "@iconify/tailwind4";
+@plugin "daisyui" {
+    themes: corporate --default, dark --prefersdark;
+}
+/*@plugin "flyonui" {
+    themes: corporate --default, dark --prefersdark;
+    root: ":root";
+}
+
+@import "../../node_modules/flyonui/variants.css";*/
+
+
